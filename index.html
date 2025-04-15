@@ -35,6 +35,20 @@
         </div>
 
         <div class="control-group">
+            <label for="font-weight">Font weight: <span id="font-weight-value">400</span></label>
+            <div class="control-row">
+                <select id="font-weight">
+                    <option value="400">400 (Regular)</option>
+                    <option value="450">450</option>
+                    <option value="500">500 (Medium)</option>
+                    <option value="600">600 (Semibold)</option>
+                    <option value="700">700 (Bold)</option>
+                </select>
+                <button class="refresh-button" data-reset="font-weight" data-value="400">↺</button>
+            </div>
+        </div>
+
+        <div class="control-group">
             <label for="sf-size">San Francisco font size (px): <span id="sf-size-value">20</span></label>
             <div class="control-row">
                 <input type="range" id="sf-size" min="8" max="72" step="1" value="20">
