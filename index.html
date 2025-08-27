@@ -1,92 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>font-overlay</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="draeger-fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <h1>font-overlay</h1>
-    <h2>Inter vs. San Francisco</h2>
+    <h2>Font Comparison: San Francisco, Draeger, Roboto, MS Serif</h2>
 
     <div class="comparison">
-        <div class="text-layer sf" id="sf-text">
-            Typography is the art and technique of arranging type to make
-            written language legible, readable, and appealing when displayed. The arrangement of type involves selecting
-            typefaces, point sizes, line lengths, line-spacing, and letter-spacing, and adjusting the space between
-            pairs of letters.
-        </div>
-        <div class="text-layer inter" id="inter-text">
-            Typography is the art and technique of arranging type to make
-            written language legible, readable, and appealing when displayed. The arrangement of type involves selecting
-            typefaces, point sizes, line lengths, line-spacing, and letter-spacing, and adjusting the space between
-            pairs of letters.
-        </div>
+      <div class="text-layer sf" id="sf-text">
+        Typography is the art and technique of arranging type to make written
+        language legible, readable, and appealing when displayed. The
+        arrangement of type involves selecting typefaces, point sizes, line
+        lengths, line-spacing, and letter-spacing, and adjusting the space
+        between pairs of letters.
+      </div>
+
+      <div class="text-layer robo" id="robo-text">
+        Typography is the art and technique of arranging type to make written
+        language legible, readable, and appealing when displayed. The
+        arrangement of type involves selecting typefaces, point sizes, line
+        lengths, line-spacing, and letter-spacing, and adjusting the space
+        between pairs of letters.
+      </div>
+
+      <div class="text-layer ms-serif" id="ms-serif-text">
+        Typography is the art and technique of arranging type to make written
+        language legible, readable, and appealing when displayed. The
+        arrangement of type involves selecting typefaces, point sizes, line
+        lengths, line-spacing, and letter-spacing, and adjusting the space
+        between pairs of letters.
+      </div>
+
+      <div class="text-layer draeger" id="draeger-text">
+        Typography is the art and technique of arranging type to make written
+        language legible, readable, and appealing when displayed. The
+        arrangement of type involves selecting typefaces, point sizes, line
+        lengths, line-spacing, and letter-spacing, and adjusting the space
+        between pairs of letters.
+      </div>
     </div>
 
     <div class="controls">
-        <div class="control-group">
-            <label for="font-weight">Font weight: <span id="font-weight-value">400</span></label>
-            <div class="control-row">
-                <select id="font-weight">
-                    <option value="400">400 (Regular)</option>
-                    <option value="450">450</option>
-                    <option value="500">500 (Medium)</option>
-                    <option value="600">600 (Semibold)</option>
-                    <option value="700">700 (Bold)</option>
-                </select>
-                <button class="refresh-button" data-reset="font-weight" data-value="400">↺</button>
-            </div>
+      <div class="control-group">
+        <label for="font-weight"
+          >Font weight: <span id="font-weight-value">400</span></label
+        >
+        <div class="control-row">
+          <select id="font-weight">
+            <option value="400">400 (Regular)</option>
+            <option value="450">450</option>
+            <option value="500">500 (Medium)</option>
+            <option value="600">600 (Semibold)</option>
+            <option value="700">700 (Bold)</option>
+          </select>
+          <button
+            class="refresh-button"
+            data-reset="font-weight"
+            data-value="400"
+          >
+            ↺
+          </button>
         </div>
+      </div>
 
-        <div class="control-group">
-            <label for="sf-size">San Francisco font size (px): <span id="sf-size-value">20</span></label>
-            <div class="control-row">
-                <input type="range" id="sf-size" min="8" max="80" step="1" value="20">
-                <button class="refresh-button" data-reset="sf-size" data-value="20">↺</button>
-            </div>
+      <div class="control-group">
+        <label for="draeger-size"
+          >Draeger font size (px):
+          <span id="draeger-size-value">20</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="draeger-size"
+            min="8"
+            max="80"
+            step="1"
+            value="20"
+          />
+          <button
+            class="refresh-button"
+            data-reset="draeger-size"
+            data-value="20"
+          >
+            ↺
+          </button>
         </div>
+      </div>
 
-        <div class="control-group">
-            <label for="inter-size">Inter font size (px): <span id="inter-size-value">20</span></label>
-            <div class="control-row">
-                <input type="range" id="inter-size" min="8" max="80" step="1" value="20">
-                <button class="refresh-button" data-reset="inter-size" data-value="20">↺</button>
-            </div>
+      <div class="control-group">
+        <label for="sf-size"
+          >San Francisco font size (px):
+          <span id="sf-size-value">20</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="sf-size"
+            min="8"
+            max="80"
+            step="1"
+            value="20"
+          />
+          <button class="refresh-button" data-reset="sf-size" data-value="20">
+            ↺
+          </button>
         </div>
+      </div>
 
-        <div class="control-group">
-            <label for="opsz">Optical size (opsz): <span id="opsz-value">14</span></label>
-            <div class="control-row">
-                <input type="range" id="opsz" min="14" max="32" step="0.1" value="14">
-                <button class="refresh-button" data-reset="opsz" data-value="14">↺</button>
-            </div>
+      <div class="control-group">
+        <label for="robo-size"
+          >Roboto font size (px): <span id="robo-size-value">20</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="robo-size"
+            min="8"
+            max="80"
+            step="1"
+            value="20"
+          />
+          <button class="refresh-button" data-reset="robo-size" data-value="20">
+            ↺
+          </button>
         </div>
+      </div>
 
-        <div class="control-group">
-            <label for="letter-spacing">Letter spacing (px): <span id="letter-spacing-value">0</span></label>
-            <div class="control-row">
-                <input type="range" id="letter-spacing" min="-2" max="2" step="0.01" value="0">
-                <button class="refresh-button" data-reset="letter-spacing" data-value="0">↺</button>
-            </div>
+      <div class="control-group">
+        <label for="ms-serif-size"
+          >MS Serif font size (px):
+          <span id="ms-serif-size-value">20</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="ms-serif-size"
+            min="8"
+            max="80"
+            step="1"
+            value="20"
+          />
+          <button
+            class="refresh-button"
+            data-reset="ms-serif-size"
+            data-value="20"
+          >
+            ↺
+          </button>
         </div>
+      </div>
 
-        <div class="control-group">
-            <label for="sample-text">Sample Text:</label>
-            <textarea
-                id="sample-text">Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. The arrangement of type involves selecting typefaces, point sizes, line lengths, line-spacing, and letter-spacing, and adjusting the space between pairs of letters.</textarea>
+      <div class="control-group">
+        <label for="opsz"
+          >Optical size (opsz): <span id="opsz-value">14</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="opsz"
+            min="14"
+            max="32"
+            step="0.1"
+            value="14"
+          />
+          <button class="refresh-button" data-reset="opsz" data-value="14">
+            ↺
+          </button>
         </div>
+      </div>
+
+      <div class="control-group">
+        <label for="letter-spacing"
+          >Letter spacing (px): <span id="letter-spacing-value">0</span></label
+        >
+        <div class="control-row">
+          <input
+            type="range"
+            id="letter-spacing"
+            min="-2"
+            max="2"
+            step="0.01"
+            value="0"
+          />
+          <button
+            class="refresh-button"
+            data-reset="letter-spacing"
+            data-value="0"
+          >
+            ↺
+          </button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="sample-text">Sample Text:</label>
+        <textarea id="sample-text">
+Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. The arrangement of type involves selecting typefaces, point sizes, line lengths, line-spacing, and letter-spacing, and adjusting the space between pairs of letters.</textarea
+        >
+      </div>
     </div>
 
     <div class="values">
-        <p>Current values:</p>
-        <pre id="current-values"></pre>
+      <p>Current values:</p>
+      <pre id="current-values"></pre>
     </div>
 
     <script src="font-overlay.js"></script>
-</body>
-
+  </body>
 </html>
